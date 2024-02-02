@@ -1,0 +1,66 @@
+.home-page {
+    position: relative;
+    display: flex;
+    height: 100vh;
+    background: linear-gradient(135deg, #3498db, #9b59b6);
+    color: rgb(22, 216, 119);
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+  }
+ 
+  
+  
+  .home-page.show {
+    animation: fadeIn 1s ease-in-out forwards;
+  }
+  
+  .text-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+    z-index: 2;
+  }
+  
+  .chakra-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .chakra-circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: conic-gradient(
+      #ffd700 0deg 60deg,
+      transparent 60deg 120deg,
+      #ffd700 120deg 180deg,
+      transparent 180deg 240deg,
+      #ffd700 240deg 300deg,
+      transparent 300deg 360deg
+    );
+    animation: rotateChakra 10s linear infinite;
+    z-index: 1;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes rotateChakra {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
