@@ -29,7 +29,7 @@ const userSchema = new mongoose.Schema({
 userSchema.methods.generateAuthToken = async function(){                               //token generation for secure access of data
 
    try {
-       const Secret_key ='SASNDKJAHDIHUWDIUAHDIZADHAIDYSZLKJZKSDZDJAWIODIAODAWDOADAKHKSHDKADHAKD';
+       const Secret_key ='Your Key';
        let tokende = jwt.sign({_id:this._id},Secret_key);
        this.tokens = this.tokens.concat({token:tokende});                                     //adding token to user schema
       await this.save();
